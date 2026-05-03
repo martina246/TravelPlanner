@@ -21,6 +21,10 @@ public class Trip {
         COMPLETED;
     }
 
+    public Trip() {
+        
+    }
+
     public Trip(int id, String title, LocalDate startDate, LocalDate endDate, double budget, Status status, String destination, String activity, String accommodation, double expense) {
         this.id = id;
         this.title = title;
