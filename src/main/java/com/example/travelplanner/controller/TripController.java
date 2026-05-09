@@ -30,6 +30,8 @@ public class TripController {
     @GetMapping("/trips/new")
     public String addNewTrip(Model model) {
         model.addAttribute("trip", new Trip());
+        model.addAttribute("editing", false);
+
         return "trip-form";
     }
     
@@ -54,6 +56,7 @@ public class TripController {
     public String updateTrip(@PathVariable int id, Model model) {
         Trip trip = tripService.getTrip(id);
         model.addAttribute("trip", trip);
+        model.addAttribute("editing", true);
         return "trip-form";
 
     }

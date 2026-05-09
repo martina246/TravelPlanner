@@ -2,12 +2,18 @@ package com.example.travelplanner.model;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 public class Trip {
     private int id;
     private String title;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
+    
     private double budget;
     private String destination;
     private String activity;
@@ -22,7 +28,7 @@ public class Trip {
     }
 
     public Trip() {
-        
+
     }
 
     public Trip(int id, String title, LocalDate startDate, LocalDate endDate, double budget, Status status, String destination, String activity, String accommodation, double expense) {

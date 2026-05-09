@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Trip details</title>
+</head>
+<body>
+    <p>ID: <span th:text="${trip.id}"></span></p>
+    <p>Title: <span th:text="${trip.title}"></span></p>
+    <p>Start date: <span th:text="${trip.startDate}"></span></p>
+    <p>End date: <span th:text="${trip.endDate}"></span></p>
+    <p>Budget: <span th:text="${trip.budget}"></span></p>
+    <p>Status: <span th:text="${trip.status}"></span></p>
+    <p>Destination: <span th:text="${trip.destination}"></span></p>
+    <p>Activity: <span th:text="${trip.activity}"></span></p>
+    <p>Accommodation: <span th:text="${trip.accommodation}"></span></p>
+    <p>Expense: <span th:text="${trip.expense}"></span></p>
+
+    <a href="/trips">Back</a>
+</body>
+</html>
