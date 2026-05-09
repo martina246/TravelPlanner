@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <meta charset="UTF-8" />
     <title>Add new trip</title>
 </head>
-<body>
+<body class="formPage">
+    <div class="content3">
+        <h1>Form</h1>
 
-    <h1>Form</h1>
+        <form th:action="${editing} ? @{/trips/update} : @{/trips/save}" th:object="${trip}" method="post">
+            <input type="hidden" th:field="*{id}"/>
 
-    <form th:action="${editing} ? @{/trips/update} : @{/trips/save}" th:object="${trip}" method="post">
-        <input type="hidden" th:field="*{id}"/>
+            <label>Title:</label>
+            <input type="text" th:field="*{title}"/>
+            <br><br>
 
-        <label>Title:</label>
-        <input type="text" th:field="*{title}"/>
-        <br><br>
+            <label>Start date:</label>
+            <input type="date" th:field="*{startDate}"/>
+            <br><br>
 
-        <label>Start date:</label>
-        <input type="date" th:field="*{startDate}"/>
-        <br><br>
+            <label>End date:</label>
+            <input type="date" th:field="*{endDate}"/>
+            <br><br>
 
-        <label>End date:</label>
-        <input type="date" th:field="*{endDate}"/>
-        <br><br>
+            <label>Budget:</label>
+            <input type="text" th:field="*{budget}"/>
+            <br><br>
 
-        <label>Budget:</label>
-        <input type="text" th:field="*{budget}"/>
-        <br><br>
+            <label>Status:</label>
+            <select th:field="*{status}">
+                <option value="PLANNED">Planned</option>
+                <option value="ACTIVE">Active</option>
+                <option value="COMPLETED">Completed</option>
+            </select>
+            <br><br>
 
-        <label>Status:</label>
-        <select th:field="*{status}">
-            <option value="PLANNED">Planned</option>
-            <option value="ACTIVE">Active</option>
-            <option value="COMPLETED">Completed</option>
-        </select>
-        <br><br>
+            <label>Destination:</label>
+            <input type="text" th:field="*{destination}"/>
+            <br><br>
 
-        <label>Destination:</label>
-        <input type="text" th:field="*{destination}"/>
-        <br><br>
+            <label>Activity:</label>
+            <input type="text" th:field="*{activity}"/>
+            <br><br>
 
-        <label>Activity:</label>
-        <input type="text" th:field="*{activity}"/>
-        <br><br>
+            <label>Accommodation:</label>
+            <input type="text" th:field="*{accommodation}"/>
+            <br><br>
 
-        <label>Accommodation:</label>
-        <input type="text" th:field="*{accommodation}"/>
-        <br><br>
+            <label>Expense:</label>
+            <input type="text" th:field="*{expense}"/>
+            <br><br>
 
-        <label>Expense:</label>
-        <input type="text" th:field="*{expense}"/>
-        <br><br>
+            <button type="submit">Save</button>
 
-        <button type="submit">Save</button>
+        </form>
+    </div>
 
-    </form>
+    
 </body>
 </html>

@@ -1,0 +1,261 @@
+/*...............POCETNA STRANICA..............*/
+
+.home {
+   /**/ margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    background-image: url('worldMap.jpg');
+    background-size: cover;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1f3c88;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.homeA {
+    display: inline-block;
+    background: #1f3c88;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.homeA:hover {
+    background: #162b63;
+}
+
+/*...............TRIPS STRANICA..............*/
+
+.trips {
+   /**/ margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+.allTrips h1 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #1f3c88;
+}
+
+.addButton {
+    margin-bottom: 25px;
+    display: inline-block;
+    background: #1f3c88;
+    color: white;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.addButton:hover {
+    background: #162b63;
+}
+
+.allTrips {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+ tr:nth-child(even) {
+    background-color: #fafafa;;
+ }
+
+th {
+    border: 1.5px solid #f4f7fb;
+    background-color: #1f3c88;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #FFFAFA;
+}
+
+.actions a {
+    display: flex;
+    justify-content: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 4px;
+    transition: 0.2s;
+}
+
+.actions .edit {
+    background-color: #ffc857;
+}
+
+.actions .details {
+    background-color: #50b2c0;
+}
+
+.actions .delete {
+    background-color: #e71d36;
+}
+
+.actions a:hover{
+    opacity: 0.8;
+}
+
+/*...............DETAILS STRANICA..............*/
+
+.details {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.content2 p {
+    background-color: #f4f7fb;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.content2 .id {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/*...............EDIT/ADD STRANICA..............*/
+
+.formPage {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.content3 {
+    background-color: white;
+    width: 450px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+    
+}
+
+.content3 h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1f3c88;
+}
+
+.content3 label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.content3 input,
+.content3 select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cfd6e0;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.content3 input:focus,
+.content3 select:focus {
+    outline: none;
+    border-color: #1f3c88;
+    box-shadow: 0 0 4px rgba(31, 60, 136, 0.4);
+}
+
+.content3 button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #1f3c88;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content3 button:hover {
+    background-color: #162b63;
+}

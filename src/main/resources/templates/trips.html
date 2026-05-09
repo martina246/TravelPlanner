@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <meta charset="UTF-8" />
     <title>TripsPage</title>
 </head>
-<body>
-    <h1>Trips page</h1>
-    <a href="/trips/new">Add new trip</a>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Start date</th>
-            <th>End date</th>
-            <th>Budget</th>
-            <th>Status</th>
-            <th>Destination</th>
-            <th>Accommodation</th>
-            <th>Activity</th>
-            <th>Expense</th>
-            <th>Actions</th>
-        </tr>
-        <tr th:each="trip : ${trips}">
-            <td th:text="${trip.id}">1</td>
-            <td th:text="${trip.title}">Trip title</td>
-            <td th:text="${trip.startDate}">Start date</td>
-            <td th:text="${trip.endDate}">End date</td>
-            <td th:text="${trip.budget}">Budget</td>
-            <td th:text="${trip.status}">Status</td>
-            <td th:text="${trip.destination}">Destination</td>
-            <td th:text="${trip.accommodation}">Accommodation</td>
-            <td th:text="${trip.activity}">Activity</td>
-            <td th:text="${trip.expense}">Expense</td>
-            <td>
-                <a th:href="@{/trips/details/{id}(id=${trip.id})}">
-                    Details
-                </a>
-                <a th:href="@{/trips/edit/{id}(id=${trip.id})}">
-                    Edit
-                </a>
-                <a th:href="@{/trips/delete/{id}(id=${trip.id})}">
-                    Delete
-                </a>
-            </td>
-            
-        </tr>
-    </table>
+<body class="trips">
+
+    
+    <div class="allTrips">
+        <h1>Trips page</h1>
+        <a class="addButton" href="/trips/new">Add new trip</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Budget</th>
+                <th>Status</th>
+                <th>Destination</th>
+                <th>Accommodation</th>
+                <th>Activity</th>
+                <th>Expense</th>
+                <th>Actions</th>
+            </tr>
+            <tr th:each="trip : ${trips}">
+                <td th:text="${trip.id}">1</td>
+                <td th:text="${trip.title}">Trip title</td>
+                <td th:text="${trip.startDate}">Start date</td>
+                <td th:text="${trip.endDate}">End date</td>
+                <td th:text="${trip.budget}">Budget</td>
+                <td th:text="${trip.status}">Status</td>
+                <td th:text="${trip.destination}">Destination</td>
+                <td th:text="${trip.accommodation}">Accommodation</td>
+                <td th:text="${trip.activity}">Activity</td>
+                <td th:text="${trip.expense}">Expense</td>
+                <td>
+                    <div class="actions">
+                        <a th:href="@{/trips/details/{id}(id=${trip.id})}" class="details">
+                            Details
+                        </a>
+                        <a th:href="@{/trips/edit/{id}(id=${trip.id})}" class="edit">
+                            Edit
+                        </a>
+                        <a th:href="@{/trips/delete/{id}(id=${trip.id})}" class="delete">
+                            Delete
+                        </a>
+                    </div>
+                    
+                </td>
+                
+            </tr>
+        </table>
+        
+    </div>
+    
 </body>
 </html>
